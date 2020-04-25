@@ -1,17 +1,16 @@
-class Solution:
-    def isMatch(self, s: str, p: str) -> bool:
-        slen = len(s)
-        plen = len(p)
-        if plen == 0:
-            return slen == 0
-        schar = s[0] if slen > 0 else None
-        pchar = p[0]
-        many = p[1] == '*' if plen > 1 else False
-        match = schar == pchar or (pchar == '.' and schar is not None)
-        if many:
-            if match:
-                return self.isMatch(s[1:], p[2:]) or self.isMatch(s[1:], p)
-            else:
-                return self.isMatch(s, p[2:])
-        else:
-            return match and self.isMatch(p[1:], p[1:])
+class Solution(object):
+    def isMatch(self, s, p):
+        memo = {}
+        def dp(i, j):
+            if (i, j) not in memo:
+                if j == len(p):
+                    ans = i == len(s)
+                else:
+                    match = i < len(s) and p[j] in {s[i], '.'}
+                    if j+1 < len(p) and p[j+1] == '*':
+                        ans = dp(i, j+2) or match and dp(i+1, j)
+                    else:
+                        ans = match and dp(i+1, j+1)
+                memo[i, j] = ans
+            return memo[i, j]
+        return dp(0, 0)
