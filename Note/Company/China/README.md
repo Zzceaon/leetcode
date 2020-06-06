@@ -1,0 +1,4 @@
+- 快手  头条(抖音)  Airbnb Beijng  Snapchat深圳
+- 微信 地平线机器人 第四范式 小米 Musically Face++
+- BAT 微软 Google 小红书 饿了么 网易等等
+- 新美大 滴滴等
