@@ -1,5 +1,5 @@
-Python: 4
-Java: 2
-Javascript: 2
-HTML/CSS: 2
-R: 2
+- Python: 4
+- Java: 2
+- Javascript: 2
+- HTML/CSS: 2
+- R: 2
