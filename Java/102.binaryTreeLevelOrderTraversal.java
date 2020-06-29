@@ -1,11 +1,3 @@
-/*
- * @Author: Zzceaon
- * @Date: 2020-06-25 19:24:01
- * @LastEditTime: 2020-06-28 22:12:43
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \leetcode\Java\102.binaryTreeLevelOrderTraversal.java
- */ 
 // BFS
 // class Solution {
 //   public List<List<Integer>> levelOrder(TreeNode root) {
@@ -33,3 +25,25 @@
 //   }
 // }
 
+// DFS
+class Solution {
+  public List<List<Integer>> levelOrder(TreeNode root) {
+    List<List<Integer>> res = new ArrayList<>();
+    if (root != null) {
+      dfs(res, root, 0);
+    }
+    return res;
+  }
+  public void dfs(List<List<Integer>> res, TreeNode node, int level) {
+    if (res.size() - 1 < level) {
+      res.add(new ArrayList<>());
+    }
+    res.get(level).add(node.val);
+    if (node.left != null) {
+      dfs(res, node.left, level + 1);
+    }
+    if (node.right != null) {
+      dfs(res, node.right, level + 1);
+    }
+  }
+}
