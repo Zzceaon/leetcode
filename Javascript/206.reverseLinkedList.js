@@ -1,36 +1,36 @@
 // 迭代
-// var reverseList = function(head) {
-//     let prev = null;
-//     let curr = head;
-//     while (curr != null) {
-//         let nextTemp = curr.next;
-//         curr.next = prev;
-//         prev = curr;
-//         curr = nextTemp;
-//     }
-//     return prev;
-// };
+var reverseList = function(head) {
+    let prev = null;
+    let curr = head;
+    while (curr != null) {
+        let nextTemp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = nextTemp;
+    }
+    return prev;
+};
 
 // 尾递归
-// var reverseList = function(head) {
-//     let reverse = (prev, curr) => {
-//         if (!curr) return prev;
-//         let next = curr.next;
-//         curr.next = prev;
-//         return reverse(curr, next);
-//     }
-//     return reverse(null, head);
-// };
+var reverseList = function(head) {
+    let reverse = (prev, curr) => {
+        if (!curr) return prev;
+        let next = curr.next;
+        curr.next = prev;
+        return reverse(curr, next);
+    }
+    return reverse(null, head);
+};
 
 // 递归
-// var reverseList = function(head) {
-//     if (!head || !head.next) return head;
-//     let nextTemp = head.next;
-//     let reverseHead = reverseList(nextTemp);
-//     head.next = null;
-//     nextTemp.next = head;
-//     return reverseHead;
-// };
+var reverseList = function(head) {
+    if (!head || !head.next) return head;
+    let nextTemp = head.next;
+    let reverseHead = reverseList(nextTemp);
+    head.next = null;
+    nextTemp.next = head;
+    return reverseHead;
+};
 
 // Stack
 var reverseList = function(head) {
