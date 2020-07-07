@@ -1,3 +1,4 @@
+O(max(m, n)) O(max(m, n))
 var addTwoNumbers = function(l1, l2) {
     let result = new ListNode(0),
         node = result;

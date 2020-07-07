@@ -1,3 +1,4 @@
+# O(max(m, n)) O(max(m, n))
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         if not l1: return l2
