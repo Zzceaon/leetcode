@@ -25,7 +25,3 @@ var addTwoNumbers = function(l1, l2) {
     }
     return result;
 }
-function ListNode(val) {
-    this.val = val;
-    this.next = null;
-}
