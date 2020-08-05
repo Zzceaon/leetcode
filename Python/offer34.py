@@ -8,8 +8,10 @@ class Solution:
             tar -= root.val
             if tar == 0 and not root.left and not root.right:
                 res.append(list(path))
+            # 递阶段
             recur(root.left, tar)
             recur(root.right, tar)
+            # 归阶段
             path.pop()
         recur(root, sum)
         return res

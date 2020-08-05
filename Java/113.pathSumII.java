@@ -12,8 +12,10 @@ class Solution {
         if (tar == 0 && root.left == null && root.right == null) {
             res.add(new LinkedList(path));
         }
+        // 递阶段
         recur(root.left, tar);
         recur(root.right, tar);
+        // 归阶段
         path.removeLast();
     }
 }
