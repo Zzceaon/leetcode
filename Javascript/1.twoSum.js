@@ -5,19 +5,19 @@
 // 两个整数 i + j = 9
 
 //暴力解法 o(n^2)
-// var twoSum; //undefined 类型未定义
-// twoSum = function(nums, target) {
-//     let arr =[];
-//     for (let i = 0; i < nums.length; i++) {
-//         for (let j = i + 1; j < nums.length; j++) {
-//             // 不能自己加自己
-//             if (nums[i] + nums[j] === target) {
-//                 arr = [i, j];
-//                 return arr;
-//             }
-//         }
-//     }
-// }
+var twoSum; //undefined 类型未定义
+twoSum = function(nums, target) {
+    let arr =[];
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i + 1; j < nums.length; j++) {
+            // 不能自己加自己
+            if (nums[i] + nums[j] === target) {
+                arr = [i, j];
+                return arr;
+            }
+        }
+    }
+}
 
 // o(n)
 //声明const必须赋值,之后不能改变值
