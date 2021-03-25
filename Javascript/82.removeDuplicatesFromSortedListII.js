@@ -1,3 +1,5 @@
+// 时间复杂度：O(n)O(n)，其中 nn 是链表的长度。
+// 空间复杂度：O(1)O(1)。
 var deleteDuplicates = function(head) {
   if (!head) {
     return head;
