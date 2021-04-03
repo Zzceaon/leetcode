@@ -1,5 +1,5 @@
-// 时间复杂度： O(\log n)O(logn)，其中 nn 为 \textit{nums}nums 数组的大小。整个算法时间复杂度即为二分查找的时间复杂度 O(\log n)O(logn)。
-// 空间复杂度： O(1)O(1) 。我们只需要常数级别的空间存放变量。
+// 时间复杂度： O(log n)，其中 n 为 nums 数组的大小。整个算法时间复杂度即为二分查找的时间复杂度 O(log n)。
+// 空间复杂度： O(1) 。我们只需要常数级别的空间存放变量。
 const search = (nums, target) => {
   let n = nums.length;
   if (n == 0) {

@@ -1,5 +1,5 @@
-// 时间复杂度： O(\log n)O(logn) ，其中 nn 为数组的长度。二分查找的时间复杂度为 O(\log n)O(logn)，一共会执行两次，因此总时间复杂度为 O(\log n)O(logn)。
-// 空间复杂度：O(1)O(1) 。只需要常数空间存放若干变量。
+// 时间复杂度： O(log n)，其中 n 为数组的长度。二分查找的时间复杂度为O(logn)，一共会执行两次，因此总时间复杂度为 O(logn)。
+// 空间复杂度：O(1) 。只需要常数空间存放若干变量。
 const binarySearch = (nums, target, lower) => {
   let left = 0, right = nums.length - 1, ans = nums.length;
   while (left <= right) {
