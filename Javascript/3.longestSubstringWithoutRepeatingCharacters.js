@@ -1,15 +1,15 @@
-var lengthOfLongestSubstring = function(s) {
-    let res = 0;
-    for (let i = 0; i < s.length; i++) {
-        let set = new Set();
-        set.add(s.charAt(i));
-        for (let j = i + 1; j < s.length; j++) {
-            if (set.has(s.charAt(j))) {
-                break;
-            }
-            set.add(s.charAt(j));
+function lengthOfLongestSubstring(s) {
+    const occ = new Set(), n = s.length
+    let rk = -1, ans = 0
+    for (let i = 0; i < n; i++) {
+        if (i !== 0) {
+            occ.delete(s.charAt(i - 1))
         }
-        res = Math.max(res, set.size);
+        while (rk + 1 < n && !occ.has(s.charAt(rk + 1))) {
+            occ.add(s.charAt(rk + 1))
+            rk++
+        }
+        ans = Math.max(ans, rk - i + 1)
     }
-    return res;
+    return ans
 };
