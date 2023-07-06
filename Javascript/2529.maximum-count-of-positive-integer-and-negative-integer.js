@@ -3,14 +3,14 @@
  * @return {number}
  */
 var maximumCount = function(nums) {
-  const binarySearch = (num, target) => {
+  const binarySearch = (nums, target) => {
       let left = 0, right = nums.length - 1
       while (left <= right) {
           let mid = (left + right) >> 1
           if (nums[mid] < target) {
-              left += 1
+              left++
           } else {
-              right -= 1
+              right--
           }
       }
       return left
